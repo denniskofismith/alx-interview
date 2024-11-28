@@ -5,10 +5,9 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangle = [[1]]  # Initialize the first row
+    triangle = [[1]]
 
     for i in range(1, n):
-        # Generate the next row using the previous row
         prev_row = triangle[-1]
         new_row = [1]  # First element is always 1
         for j in range(1, len(prev_row)):
@@ -17,3 +16,6 @@ def pascal_triangle(n):
         triangle.append(new_row)
 
     return triangle
+
+
+print(pascal_triangle(0))
